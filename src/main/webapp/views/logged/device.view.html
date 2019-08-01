@@ -1,0 +1,177 @@
+<h3 class="lead component-holder text-left">Device</h3>
+
+<datasource data-component="crn-datasource" filter="" name="Device" entity="app.Device" keys="id" rows-per-page="100" class="" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;token&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;platform&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;model&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;platformVersion&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;appName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;appVersion&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}]" lazy="true"></datasource>
+
+    <div ng-hide="Device.inserting || Device.editing" data-component="crn-datasource-filter" id="crn-datasource-filter-general3855" class="">
+      <div class="form-group">
+        <label for="textinput-filter" class="">{{"template.crud.search" | translate}}</label>
+        <input type="text" ng-model="vars.search" id="textinput-filter" class="form-control k-textbox" cronapp-filter="appName" cronapp-filter-operator="" cronapp-filter-caseinsensitive="false" cronapp-filter-autopost="true" crn-datasource="Device" value="" placeholder="{{'template.crud.search' | translate}}">
+      </div>
+    </div>
+
+<div ng-hide="Device.editing || Device.inserting" class="component-holder ng-binding ng-scope" data-component="crn-cron-grid" id="cron-crn-grid-search">
+  <cron-grid
+      options="{&quot;dataSourceScreen&quot;:{&quot;name&quot;:&quot;Device&quot;,&quot;entity&quot;:&quot;app.Device&quot;,&quot;entityDataSource&quot;:{&quot;id&quot;:&quot;app.Device&quot;,&quot;customId&quot;:&quot;Device&quot;,&quot;name&quot;:&quot;Device&quot;,&quot;customQueryName&quot;:&quot;app.Device&quot;,&quot;paramValues&quot;:[],&quot;entityFullName&quot;:&quot;app.entity.Device&quot;,&quot;schemaFields&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;token&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;platform&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;model&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;platformVersion&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;appName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;appVersion&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;type&quot;:&quot;entity&quot;},&quot;schema&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;token&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;platform&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;model&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;platformVersion&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;appName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;appVersion&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;id&quot;:&quot;app.Device&quot;},&quot;allowPaging&quot;:true,&quot;allowSorting&quot;:true,&quot;allowGrouping&quot;:false,&quot;allowSelectionTotalPageToShow&quot;:true,&quot;allowRefreshGrid&quot;:true,&quot;allowSelectionRow&quot;:true,&quot;editable&quot;:&quot;datasource&quot;,&quot;columns&quot;:[{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;appName&quot;,&quot;headerText&quot;:&quot;App Name&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;format&quot;:&quot;&quot;,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;aggregates&quot;:[]},{&quot;dataType&quot;:&quot;Command&quot;,&quot;sortable&quot;:false,&quot;filterable&quot;:false,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;command&quot;:&quot;edit|destroy&quot;,&quot;required&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;aggregates&quot;:[]}],&quot;toolBarButtons&quot;:[{&quot;type&quot;:&quot;Native&quot;,&quot;title&quot;:&quot;create&quot;}],&quot;details&quot;:[],&quot;groupings&quot;:[]}"
+      ng-model="vars.grid3855"
+      class=""
+      style="">
+  </cron-grid>
+</div>
+
+<div data-component="crn-form" id="crn-form-form-Device-3855">
+  <div class="form" ng-show="Device.editing || Device.inserting">
+    <form crn-datasource="Device" class="">
+      <div class="tool-bar" ng-hide="datasource.editing || datasource.inserting">
+        <button class="btn btn-primary btn-fab k-button" data-component="crn-button" ng-click="datasource.startInserting()"><span class="k-icon k-i-plus"></span></button>
+        <button class="btn btn-primary btn-fab k-button" data-component="crn-button" ng-click="datasource.startEditing()"><span class="k-icon k-i-edit"></span></button>
+        <button class="btn btn-primary btn-fab k-button" data-component="crn-button" ng-disabled="!datasource.hasPrevious()" ng-click="datasource.previous()"><span class="k-icon k-i-arrow-chevron-left"></span></button>
+        <button class="btn btn-primary btn-fab k-button" data-component="crn-button" ng-disabled="!datasource.hasNext()" ng-click="datasource.next()"><span class="k-icon k-i-arrow-chevron-right"></span></button>
+        <button class="btn btn-danger btn-fab k-button" data-component="crn-button" ng-click="datasource.remove()"><span class="k-icon k-i-close"></span></button>
+      </div>
+      <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting">
+        <button class="btn btn-success btn-fab k-button" id="btn_crud_post41107" data-component="crn-button" ng-click="datasource.post()"><span class="k-icon k-i-check"></span></button>
+        <button class="btn btn-danger btn-fab k-button" id="btn_crud_cancel41107" data-component="crn-button" ng-click="datasource.cancel()"><span class="k-icon k-i-cancel"></span></button>
+      </div>
+      <br/>
+      <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
+
+
+                <div data-component="crn-textinput" id="crn-textinput-appName-3855" class="">
+                  <div class="form-group">
+                        <label for="textinput-appName" class="">App Name</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="text"
+                                            ng-model="Device.active.appName"
+                                            class="form-control k-textbox"
+                                            id="textinput-appName"
+                                            placeholder="App Name"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+
+
+                <div data-component="crn-textinput" id="crn-textinput-id-3855" class="">
+                  <div class="form-group">
+                        <label for="textinput-id" class="">Id</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="text"
+                                            ng-model="Device.active.id"
+                                            class="form-control k-textbox"
+                                            id="textinput-id"
+                                            placeholder="Id"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="true">
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+
+
+                <div data-component="crn-textinput" id="crn-textinput-token-3855" class="">
+                  <div class="form-group">
+                        <label for="textinput-token" class="">Token</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="text"
+                                            ng-model="Device.active.token"
+                                            class="form-control k-textbox"
+                                            id="textinput-token"
+                                            placeholder="Token"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+
+
+                <div data-component="crn-textinput" id="crn-textinput-platform-3855" class="">
+                  <div class="form-group">
+                        <label for="textinput-platform" class="">Platform</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="text"
+                                            ng-model="Device.active.platform"
+                                            class="form-control k-textbox"
+                                            id="textinput-platform"
+                                            placeholder="Platform"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+
+
+                <div data-component="crn-textinput" id="crn-textinput-model-3855" class="">
+                  <div class="form-group">
+                        <label for="textinput-model" class="">Model</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="text"
+                                            ng-model="Device.active.model"
+                                            class="form-control k-textbox"
+                                            id="textinput-model"
+                                            placeholder="Model"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+
+
+                <div data-component="crn-textinput" id="crn-textinput-platformVersion-3855" class="">
+                  <div class="form-group">
+                        <label for="textinput-platformVersion" class="">Platform Version</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="text"
+                                            ng-model="Device.active.platformVersion"
+                                            class="form-control k-textbox"
+                                            id="textinput-platformVersion"
+                                            placeholder="Platform Version"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+
+
+                <div data-component="crn-textinput" id="crn-textinput-appVersion-3855" class="">
+                  <div class="form-group">
+                        <label for="textinput-appVersion" class="">App Version</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="text"
+                                            ng-model="Device.active.appVersion"
+                                            class="form-control k-textbox"
+                                            id="textinput-appVersion"
+                                            placeholder="App Version"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+        <!-- NtoN  -->
+        <!-- NtoN  end-->
+      </fieldset>
+    </form>
+    <form>
+      <fieldset>
+        <!-- OneToN -->
+        <!-- OneToOne  end -->
+      </fieldset>
+    </form>
+    &ensp;
+  </div>
+</div>
+
+

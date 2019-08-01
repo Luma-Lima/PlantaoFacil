@@ -1,0 +1,236 @@
+<style title="local">
+
+</style>
+<div class="component-holder ng-binding ng-scope" data-component="crn-navbar" id="crn-navbar-986427" cronapp-security=""> 
+  <nav class="navbar navbar-default"> 
+    <div class="container-fluid"> 
+      <div class="navbar-header"> 
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+      </div> 
+      <div id="navbar" class="navbar-collapse collapse"> 
+        <ul class="nav navbar-nav" style="float:none"> 
+          <li class="dropdown component-holder" data-component=""> </li> 
+          <li class="dropdown" data-component="crn-menu-item" cronapp-security="visible : Administrators"> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="glyphicon glyphicon-menu-hamburger"></i> <span>Admin</span> <span class="caret"></span> </a> 
+            <ul class="dropdown-menu" style=""> 
+              <li><a href="#/home/admin/user" class="component-holder" data-component="crn-anchor">Usuário</a></li> 
+              <li><a href="#/home/admin/medico" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor">Médicos</a></li> 
+              <li><a href="#/home/admin/agenda" class="component-holder col-md-12" data-component="crn-anchor">Agenda</a></li>
+              <li><a href="#/home/admin/hospitais" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor">Hospital</a></li> 
+              <li><a href="#/home/admin/convenio" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor">Convênio</a></li> 
+              <li><a href="#/home/admin/local_plantao" class="component-holder col-md-12" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor">Local Plantão</a></li> 
+              <li><a href="#/home/admin/horario_escala" class="component-holder col-md-12" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor">Horário Escala</a></li> 
+              <li><a href="" class="component-holder col-md-12" data-component="crn-anchor" ng-click="logout()">Sair</a></li> 
+            </ul> </li> 
+          <li class="dropdown component-holder" data-component="crn-menu-item" cronapp-security=""> <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="glyphicon glyphicon-menu-hamburger"></i> <span>{{'Servicos' | translate}}</span> <span class="caret"></span> </a> 
+            <ul class="dropdown-menu" style=""> 
+              <li><a href="#/home/logged/user" class="component-holder" data-component="crn-anchor">Usuário</a></li> 
+              <li><a href="#/home/logged/medico" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor">Médicos</a></li> 
+              <li><a href="#/home/logged/agenda" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor">Agenda</a></li> 
+              <li><a href="" class="component-holder col-md-12" data-component="crn-anchor" ng-click="logout()">Sair</a></li> 
+            </ul> </li> 
+          <li class="dropdown component-holder" data-component="crn-menu-item" cronapp-security=""> <p> </p>
+            <div class="component-holder ng-binding ng-scope" data-component="crn-button" id="crn-button-303538"> 
+              <button class="btn k-button btn-light btn-block btn-sm" ng-click="" xattr-size="btn-sm" xattr-fullsize="btn-block" xattr-theme="btn-light" xattr-disabled=""> <a href="#/home" class="component-holder" xattr-fullsize="display:inline;" style="display:inline;" data-component="crn-anchor">Calendário</a></button>
+            </div> </li><li class="dropdown component-holder" data-component="crn-menu-item" cronapp-security=""> 
+             </li><li class="dropdown component-holder" data-component="crn-menu-item" cronapp-security=""> <p> </p>
+             </li> 
+          <li class="dropdown component-holder navbar-right" data-component="crn-menu-item" cronapp-security=""> <a href="#/home" class="component-holder col-lg-1 col-sm-1 col-md-1" xattr-fullsize="display:inline;" style="display: inline; width: 45px;  height: 50px;" data-component="crn-anchor"> <i class="glyphicon glyphicon-home"></i> 
+              <div data-component="crn-icon" class="component-holder col-lg-12 col-sm-12 col-md-12" id="crn-icon-906231">
+                <i class="fa fa-home"></i>
+              </div></a></li> 
+          <li class="dropdown component-holder navbar-right" data-component="crn-menu-item"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-lg fa-gear"></i> <span>{{"ChooseTheme" | translate}}</span> <span class="caret"></span> </a> 
+            <ul class="dropdown-menu"> 
+              <li ng-repeat="theme in themes" ng-click="changeTheme(theme)"> <a href="javascript:void(0);" ng-class="{'bg-primary': myTheme==theme}">{{theme}} <i class="fa fa-lg fa-check pull-right" ng-if="myTheme==theme"></i></a></li> 
+            </ul> </li> 
+        <div class="component-holder ng-binding ng-scope" data-component="crn-button" id="crn-button-892675"></div><div class="component-holder ng-binding ng-scope" data-component="crn-button" id="crn-button-600886"></div></ul> 
+      </div> 
+    </div> 
+  </nav> 
+</div> 
+<datasource name="" entity="" keys="" rows-per-page="100" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill="" data-component="crn-datasource" class="component-holder" id="crn-datasource-330749"></datasource> 
+<div ui-view="" class="container-fluid main-view" data-container="true"> 
+    
+  <div ng-controller="CalendarCtrl as vm" class="col-md-12"> 
+    <h2 class="text-center month-title">{{ vm.calendarTitle }} </h2> 
+    <!-- MODAL DETALHES --> 
+    <!-- Detalhes do Plantão --> 
+    <div class="modal fade" id="plantaoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> 
+      <div class="modal-dialog" role="document"> 
+        <div class="modal-content"> 
+          <div class="modal-header"> 
+            <h4 class="modal-title">Detalhes do Plantão</h4> 
+          </div> 
+          <div class="modal-body"> 
+            <table class="table table-striped margin-bottom-none"> 
+              <tbody> 
+                <tr> 
+                  <td> <strong>Médico</strong></td> 
+                  <td>{{vm.currentEvent.medico}} <span ng-if="vm.currentEvent.responsavel" class="label label-success">Médico responsável</span></td> 
+                </tr> 
+                <tr> 
+                  <td> <strong>Local plantão</strong> </td> 
+                  <td>{{vm.currentEvent.local}}</td> 
+                </tr> 
+                <tr> 
+                  <td><strong>Data</strong> </td> 
+                  <td>{{vm.currentEvent.convertDates.inicio}}</td> 
+                </tr> 
+                <tr> 
+                  <td><strong>Horário escala</strong></td> 
+                  <td>{{vm.currentEvent.horario}}</td> 
+                </tr> 
+              </tbody> 
+            </table> 
+          </div> 
+        </div> 
+      </div> 
+    </div> 
+    <!-- MODAL TEST --> 
+    <div class="row row-seletor"> 
+      <div class="col-md-6 col-center-fix text-center"> 
+        <div class="btn-group"> 
+          <button class="btn btn-primary" mwl-date-modifier="" date="vm.viewDate" decrement="vm.calendarView" ng-click="vm.cellIsOpen = false"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Anterior </button> 
+          <button class="btn btn-default" mwl-date-modifier="" date="vm.viewDate" set-to-today="" ng-click="vm.cellIsOpen = false"> Atual </button> 
+          <button class="btn btn-primary" mwl-date-modifier="" date="vm.viewDate" increment="vm.calendarView" ng-click="vm.cellIsOpen = false"> Próximo <i class="fa fa-arrow-right" aria-hidden="true"></i> </button> 
+        </div> 
+      </div> 
+      <br class="visible-xs visible-sm"> 
+      <div class="col-md-6 text-center" ng-hide="true"> 
+        <div class="btn-group"> 
+          <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'year'" ng-click="vm.cellIsOpen = false">Year</label> 
+          <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'month'" ng-click="vm.cellIsOpen = false">Month</label> 
+          <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'week'" ng-click="vm.cellIsOpen = false">Week</label> 
+          <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'day'" ng-click="vm.cellIsOpen = false">Day</label> 
+        </div> 
+      </div> 
+    </div> 
+    <div class="flex-box-wrapper"> 
+      <div class="coluna-calendar"> 
+        <!-- Semana 1 --> 
+        <div id="week1" class="faixa-horarios" ng-style="{'background-color': vm.week.colors[0]}"> 
+          <div class="faixa">
+             1 
+          </div> 
+        </div> 
+        <!-- Semana 2 --> 
+        <div id="week2" class="faixa-horarios" ng-style="{'background-color': vm.week.colors[1]}"> 
+          <div class="faixa">
+             2 
+          </div> 
+        </div> 
+        <!-- Semana 3 --> 
+        <div id="week3" class="faixa-horarios" ng-style="{'background-color': vm.week.colors[2]}"> 
+          <div class="faixa">
+             3 
+          </div> 
+        </div> 
+        <!-- Semana 4 --> 
+        <div id="week4" class="faixa-horarios vermelho" ng-style="{'background-color': vm.week.colors[3]}"> 
+          <div class="faixa">
+             4 
+          </div> 
+        </div> 
+        <!-- Semana 5 --> 
+        <div id="week5" class="faixa-horarios azul" ng-style="{'background-color': vm.week.colors[4]}"> 
+          <div class="faixa">
+             5 
+          </div> 
+        </div> 
+      </div> 
+      <mwl-calendar class="comp-calendar" events="vm.events" view="vm.calendarView" view-title="vm.calendarTitle" view-date="vm.viewDate" on-event-click="vm.eventClicked(calendarEvent)" on-event-times-changed="vm.eventTimesChanged(calendarEvent); calendarEvent.startsAt = calendarNewEventStart; calendarEvent.endsAt = calendarNewEventEnd" cell-is-open="vm.cellIsOpen" day-view-start="06:00" day-view-end="22:59" day-view-split="30" cell-modifier="vm.modifyCell(calendarCell)" cell-auto-open-disabled="true" on-timespan-click="vm.timespanClicked(calendarDate, calendarCell)"> 
+      </mwl-calendar> 
+    </div> 
+  </div> 
+  <style class="col-md-12">
+        .semanas-box{
+            display: flex;
+            width:  400px;
+            flex-direction: column;
+        }
+        
+        .semanas-box ul{
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .semanas-box ul li{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+        
+        .semanas-box ul li strong{
+            width: 100px;    
+        }
+    </style> 
+  <!--<div ng-controller="CalendarCtrl as vm" class="col-md-12 semanas-box">--> 
+  <!--    <h3>Configuração Cores das semanas </h3>--> 
+  <!--    <ul>--> 
+  <!--        <li><strong>Semana 1</strong> <input class="form-control" ng-change="vm.setColor($event)" ng-model="vm.week.colors[0]" placeholder="Cor Hexadecimal, ex. #CCCCCC" /></li>--> 
+  <!--        <li><strong>Semana 2</strong> <input class="form-control"  ng-model="vm.week.colors[1]" placeholder="Cor Hexadecimal, ex. #CCCCCC" /></li>--> 
+  <!--        <li><strong>Semana 3</strong> <input class="form-control" ng-model="vm.week.colors[2]" placeholder="Cor Hexadecimal, ex. #CCCCCC" /></li>--> 
+  <!--        <li><strong>Semana 4</strong> <input class="form-control" ng-model="vm.week.colors[3]" placeholder="Cor Hexadecimal, ex. #CCCCCC" /></li>--> 
+  <!--        <li><strong>Semana 5</strong> <input class="form-control" ng-model="vm.week.colors[4]" placeholder="Cor Hexadecimal, ex. #CCCCCC" /></li>--> 
+  <!--        <li> <strong></strong> <button class="btn btn-block btn-primary btn-lg">Alterar cores </button></li>--> 
+  <!--    </ul>--> 
+  <!--</div>--> 
+</div>
+ 
+<div class="modal fade" id="modalPassword"> 
+  <div class="modal-dialog"> 
+    <div class="modal-content"> 
+      <div class="modal-header"> 
+        <button type="button" class="close" data-dismiss="modal" aria-label="{{'Home.view.Close' | translate}}"><span aria-hidden="true">×</span></button> 
+        <h4 class="modal-title">{{"Home.view.ChangePassword" | translate}}</h4> 
+      </div> 
+      <div class="modal-body"> 
+        <form class="form-validation" autocomplete="off" name="form" role="form"> 
+          <div class="text-danger wrapper text-center" ng-show="authError"> 
+          </div> 
+          <div class="list-group list-group-sm"> 
+            <div class="list-group-item"> 
+              <input type="password" class="form-control no-border" id="oldPassword" placeholder="{{'Home.view.Old Password' | translate}}" ng-required="true"> 
+            </div> 
+            <div class="list-group-item"> 
+              <input type="password" class="form-control no-border" id="newPassword" placeholder="{{'Home.view.New Password' | translate}}" ng-required="true"> 
+            </div> 
+            <div class="list-group-item"> 
+              <input type="password" class="form-control no-border" id="newPasswordConfirmation" placeholder="{{'Home.view.Confirmation' | translate}}" ng-required="true"> 
+            </div> 
+          </div> 
+        </form> 
+      </div> 
+      <div class="modal-footer"> 
+        <button class="btn btn-primary" type="submit" ng-click="changePassword()" ng-disabled="form.$invalid || vm.dataLoading">{{"Home.view.ChangePassword" | translate}}</button> 
+        <button type="button" class="btn btn-default" data-dismiss="modal">{{'Home.view.Close' | translate}}</button> 
+      </div> 
+    </div> 
+  </div> 
+</div>
+<script>
+//     $(document).ready(function(){
+//         console.log('coisa')
+//         $('.cor-do-plantao').each(function(index, el){
+    
+//             let cor = '';
+//             switch(index){
+//                 case 1:
+//                 cor = '#CCCCCC';
+//                 break;
+                
+//                 case 2:
+//                 cor = '#006699';
+//                 break;
+                
+//                 case 3:
+//                 cor = '#999999';
+                
+//                 default:
+//                 cor = '#990000';
+//             };
+    
+//             $(el).css('background', cor);
+//         });
+// });
+</script>

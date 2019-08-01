@@ -1,0 +1,169 @@
+.mwl-calendar .cal-slide-box, .cal-slide-content cal-event-list{
+  box-shadow: none !important;
+  background: #19576f !important;
+}
+
+.event-item-action{
+  display: none !important;
+}
+
+.margin-bottom-none{
+  margin-bottom: 0px;
+}
+
+.coluna-calendar{
+  width: 7%;
+  margin-top: 30px;
+  height: 585px;
+}
+
+.coluna-calendar .faixa-horarios{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  aling-items: center;  
+  height: 101px;
+  border-bottom: 1px solid white;
+  color: white;
+}
+
+.coluna-calendar .faixa-horarios .faixa{
+  display: flex;
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.novo-agendamento-datas{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 40px;
+    max-height: 250px;
+    overflow: scroll;
+}
+
+
+.novo-agendamento-plantoes{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 40px;
+    max-height: 100px;
+    overflow: scroll;
+}
+
+.flex-box-wrapper{
+  width: 100%;
+  display: flex;
+}
+
+.comp-calendar{
+  width: 90%;
+}
+
+.col-center-fix{
+  float:none;
+  margin: auto;
+}
+
+.faixa{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  color: #666; 
+  font-size:38px;
+  font-weight: bold;
+  height: 100%;
+}
+
+.month-title{
+  text-transform: capitalize;
+}
+
+/* Cores plantão */
+
+:root{
+  --cor-azul: #b8e2ff;
+  --cor-cinza: #ff9999;
+  --cor-verde: #b3e2b0;
+  --cor-vermelha: #f17878;
+}
+
+.azul{
+  background: var(--cor-azul);
+}
+
+.cinza{
+  background: var(--cor-cinza);
+}
+
+.verde{
+  background: var(--cor-verde);
+}
+
+.vermelho{
+  background: var(--cor-vermelha);
+}
+
+.cor-do-plantao:hover{
+  background-color:none !important;
+}
+
+.cor-do-plantao:nth-child(2){
+  background: var(--cor-cinza);
+}
+.cor-do-plantao:nth-child(3){
+  background: var(--cor-verde);
+}
+ 
+.cor-do-plantao:nth-child(4){
+  background: var(--cor-azul);
+}
+.cor-do-plantao:nth-child(5){
+  background: var(--cor-vermelha);
+}
+.cor-do-plantao:nth-child(6){
+  background: var(--cor-azul);
+}
+.cor-do-plantao:nth-child(7){
+  background: var(--cor-cinza);
+}
+
+.row-seletor{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+ 
+.cal-month-day:hover{
+  background: none !important;
+}
+
+.cal-week-box-cell{
+  display: none !important;
+}
+.agendamento {
+  width: 100%; 
+  background-color: #bdc3c7; 
+  overflow: auto; 
+  display: flex;
+  flex-wrap: wrap;
+}
+
+label {
+  font-weight: bold;
+}
+/*agendador-automatico*/
+#crn-textinput-123059 {
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.modal-open {
+    overflow: scroll;
+}
+
+
+

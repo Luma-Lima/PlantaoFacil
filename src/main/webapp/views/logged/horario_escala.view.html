@@ -1,0 +1,106 @@
+<h3 class="lead component-holder text-left">Horario_Escala</h3>
+
+<datasource data-component="crn-datasource" filter="" name="Horario_Escala" entity="app.Horario_Escala" keys="id" rows-per-page="100" class="" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nm_horario_hre&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_horas_hre&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false}]" lazy="true"></datasource>
+
+    <div ng-hide="Horario_Escala.inserting || Horario_Escala.editing" data-component="crn-datasource-filter" id="crn-datasource-filter-general64124" class="">
+      <div class="form-group">
+        <label for="textinput-filter" class="">{{"template.crud.search" | translate}}</label>
+        <input type="text" ng-model="vars.search" id="textinput-filter" class="form-control k-textbox" cronapp-filter="nm_horario_hre;" cronapp-filter-operator="" cronapp-filter-caseinsensitive="false" cronapp-filter-autopost="true" crn-datasource="Horario_Escala" value="" placeholder="{{'template.crud.search' | translate}}">
+      </div>
+    </div>
+
+<div ng-hide="Horario_Escala.editing || Horario_Escala.inserting" class="component-holder ng-binding ng-scope" data-component="crn-cron-grid" id="cron-crn-grid-search">
+  <cron-grid
+      options="{&quot;dataSourceScreen&quot;:{&quot;name&quot;:&quot;Horario_Escala&quot;,&quot;entity&quot;:&quot;app.Horario_Escala&quot;,&quot;entityDataSource&quot;:{&quot;id&quot;:&quot;app.Horario_Escala&quot;,&quot;customId&quot;:&quot;Horario_Escala&quot;,&quot;name&quot;:&quot;Horario_Escala&quot;,&quot;customQueryName&quot;:&quot;app.Horario_Escala&quot;,&quot;paramValues&quot;:[],&quot;entityFullName&quot;:&quot;app.entity.Horario_Escala&quot;,&quot;schemaFields&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nm_horario_hre&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_horas_hre&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false}],&quot;type&quot;:&quot;entity&quot;},&quot;schema&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nm_horario_hre&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_horas_hre&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false}],&quot;id&quot;:&quot;app.Horario_Escala&quot;},&quot;allowPaging&quot;:true,&quot;allowSorting&quot;:true,&quot;allowGrouping&quot;:false,&quot;allowSelectionTotalPageToShow&quot;:true,&quot;allowRefreshGrid&quot;:true,&quot;allowSelectionRow&quot;:true,&quot;editable&quot;:&quot;datasource&quot;,&quot;columns&quot;:[{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;nm_horario_hre&quot;,&quot;headerText&quot;:&quot;Nm _horario _hre&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;format&quot;:&quot;&quot;,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;aggregates&quot;:[]},{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;qt_horas_hre&quot;,&quot;headerText&quot;:&quot;Qt _horas _hre&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;aggregates&quot;:[]},{&quot;dataType&quot;:&quot;Command&quot;,&quot;sortable&quot;:false,&quot;filterable&quot;:false,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;command&quot;:&quot;edit|destroy&quot;,&quot;required&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;aggregates&quot;:[]}],&quot;toolBarButtons&quot;:[{&quot;type&quot;:&quot;Native&quot;,&quot;title&quot;:&quot;create&quot;}],&quot;details&quot;:[],&quot;groupings&quot;:[]}"
+      ng-model="vars.grid64124"
+      class=""
+      style="">
+  </cron-grid>
+</div>
+
+<div data-component="crn-form" id="crn-form-form-Horario_Escala-64124">
+  <div class="form" ng-show="Horario_Escala.editing || Horario_Escala.inserting">
+    <form crn-datasource="Horario_Escala" class="">
+      <div class="tool-bar" ng-hide="datasource.editing || datasource.inserting">
+        <button class="btn btn-primary btn-fab k-button" data-component="crn-button" ng-click="datasource.startInserting()"><span class="k-icon k-i-plus"></span></button>
+        <button class="btn btn-primary btn-fab k-button" data-component="crn-button" ng-click="datasource.startEditing()"><span class="k-icon k-i-edit"></span></button>
+        <button class="btn btn-primary btn-fab k-button" data-component="crn-button" ng-disabled="!datasource.hasPrevious()" ng-click="datasource.previous()"><span class="k-icon k-i-arrow-chevron-left"></span></button>
+        <button class="btn btn-primary btn-fab k-button" data-component="crn-button" ng-disabled="!datasource.hasNext()" ng-click="datasource.next()"><span class="k-icon k-i-arrow-chevron-right"></span></button>
+        <button class="btn btn-danger btn-fab k-button" data-component="crn-button" ng-click="datasource.remove()"><span class="k-icon k-i-close"></span></button>
+      </div>
+      <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting">
+        <button class="btn btn-success btn-fab k-button" id="btn_crud_post41107" data-component="crn-button" ng-click="datasource.post()"><span class="k-icon k-i-check"></span></button>
+        <button class="btn btn-danger btn-fab k-button" id="btn_crud_cancel41107" data-component="crn-button" ng-click="datasource.cancel()"><span class="k-icon k-i-cancel"></span></button>
+      </div>
+      <br/>
+      <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
+
+
+                <div data-component="crn-textinput" id="crn-textinput-nm_horario_hre-64124" class="">
+                  <div class="form-group">
+                        <label for="textinput-nm_horario_hre" class="">Nm _horario _hre</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            maxlength="50"
+                                            type="text"
+                                            ng-model="Horario_Escala.active.nm_horario_hre"
+                                            class="form-control k-textbox"
+                                            id="textinput-nm_horario_hre"
+                                            placeholder="Nm _horario _hre"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="true">
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+
+
+                <div data-component="crn-textinput" id="crn-textinput-qt_horas_hre-64124" class="">
+                  <div class="form-group">
+                        <label for="textinput-qt_horas_hre" class="">Qt _horas _hre</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="integer"
+                                            ng-model="Horario_Escala.active.qt_horas_hre"
+                                            class="form-control k-textbox"
+                                            id="textinput-qt_horas_hre"
+                                            placeholder="Qt _horas _hre"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="true">
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+
+
+                <div data-component="crn-textinput" id="crn-textinput-id-64124" class="">
+                  <div class="form-group">
+                        <label for="textinput-id" class="">Id</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="text"
+                                            ng-model="Horario_Escala.active.id"
+                                            class="form-control k-textbox"
+                                            id="textinput-id"
+                                            placeholder="Id"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="true">
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+        <!-- NtoN  -->
+        <!-- NtoN  end-->
+      </fieldset>
+    </form>
+    <form>
+      <fieldset>
+        <!-- OneToN -->
+        <!-- OneToOne  end -->
+      </fieldset>
+    </form>
+    &ensp;
+  </div>
+</div>
+
+

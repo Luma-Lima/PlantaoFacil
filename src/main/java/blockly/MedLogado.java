@@ -1,0 +1,46 @@
+package blockly;
+
+import cronapi.*;
+import cronapi.rest.security.CronappSecurity;
+import java.util.concurrent.Callable;
+
+
+@CronapiMetaData(type = "blockly")
+@CronappSecurity
+public class MedLogado {
+
+public static final int TIMEOUT = 300;
+
+/**
+ *
+ * @return Var
+ */
+// MedLogado
+public static Var medLogado() throws Exception {
+ return new Callable<Var>() {
+
+   public Var call() throws Exception {
+    return cronapi.util.Operations.getCurrentUserName();
+   }
+ }.call();
+}
+
+/**
+ *
+ * @return Var
+ */
+// Descreva esta função...
+public static Var UserLogado() throws Exception {
+ return new Callable<Var>() {
+
+   private Var userID = Var.VAR_NULL;
+
+   public Var call() throws Exception {
+    userID = cronapi.list.Operations.getFirst((cronapi.database.Operations.query(Var.valueOf("app.entity.User"),Var.valueOf("select u.id from User u where u.name = :name"),Var.valueOf("name",cronapi.util.Operations.getCurrentUserName()))));
+    return userID;
+   }
+ }.call();
+}
+
+}
+

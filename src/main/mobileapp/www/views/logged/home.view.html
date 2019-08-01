@@ -1,0 +1,187 @@
+<ion-view cache-view="false" view-title="Home" hide-back-button="true" class="pane"> 
+  <ion-content class="scroll-content" data-component="crn-ion-content"> 
+    <datasource name="ConsultaMedico" entity="app.query376376" keys="id" rows-per-page="100" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill="" data-component="crn-datasource" class="component-holder" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;horario_Escala&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;medico&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;dt_agenda_age&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;cd_status_age&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_mudancas_age&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;cd_corsemana_age&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;color&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;startsAt&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;endsAt&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;draggable&quot;,&quot;type&quot;:&quot;Boolean&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;resizable&quot;,&quot;type&quot;:&quot;Boolean&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;actions&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;responsible&quot;,&quot;type&quot;:&quot;Boolean&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;local_Plantao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;horario_Escala_nm_horario_hre&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;medico_nr_cpf_med&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;local_Plantao_cd_codigo_lpl&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}]" condition="" lazy="false"></datasource>
+    <!-- CALENDAR BOOTSTRAP BASED --> 
+    <div ng-controller="CalendarCtrl as vm"> 
+      <h2 class="text-center text-title-mobile">{{ vm.calendarTitle }}</h2> 
+      <!-- Custom IONIC Modal --> 
+      <!-- Detalhes do Plantão --> 
+      <style>
+        .calendar-modal-overflow{
+            display: flex;
+            width:100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            position: absolute;
+        }
+     </style> 
+      <!--<div class="calendar-modal-overflow"> --> 
+      <!--   <div class="calendar-modal-window"></div>--> 
+      <!--</div>--> 
+      <div ng-style="{display: vm.isDetailEnabled ? 'block' : 'none'}" class="modal fade ionic-bootrapp-merge-fix" id="plantaoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> 
+        <div class="modal-dialog" role="document"> 
+          <div class="modal-content"> 
+            <div class="modal-header"> 
+              <h4 class="modal-title modal-title-mobile">Detalhes do Plantão</h4> 
+            </div> 
+            <div class="modal-body"> 
+              <table class="table table-striped margin-bottom-none"> 
+                <tbody> 
+                  <tr> 
+                    <td> <strong>Local plantão</strong> </td> 
+                    <td>{{vm.currentEvent.local}}</td> 
+                  </tr> 
+                  <tr> 
+                    <td> <strong>Médico</strong> </td> 
+                    <td>{{vm.currentEvent.medico}}</td> 
+                  </tr> 
+                  <tr> 
+                    <td><strong>Data</strong> </td> 
+                    <td>{{vm.currentEvent.convertDates.inicio}}</td> 
+                  </tr> 
+                  <tr> 
+                    <td><strong>Horário escala</strong></td> 
+                    <td>{{vm.currentEvent.horario}}</td> 
+                  </tr> 
+                </tbody> 
+              </table> 
+              <style>
+                  .select-box{
+                    display: flex;
+                    width: 100%;
+                   
+                    position: relative;
+                  }
+                  
+                  .select-toggle{ 
+                     width: 100%;
+                     display: flex;
+                     height: 35px;
+                     justify-content: center;
+                     align-items: center;
+                     border-top: 1px solid #ccc;
+                     border-bottom: 1px solid #ccc;                      
+                      
+                  }
+                  .select-toggle-list{
+                      display: flex;
+                      flex-direction: column;
+                      width: 100%;
+                      background: #f3f3f3;
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      min-height: 100px;
+                  }
+                  
+                  .select-toggle-list-item{
+                     width: 100%;
+                     display: flex;
+                     height: 35px;
+                     justify-content: center;
+                     align-items: center;
+                     border-bottom: 1px solid #ccc;
+                  }
+                  
+              </style> 
+              
+              <p class="sel-title" ng-if="vm.currentEvent.agendaMedicoId === vm.currentEvent.medicoId">Selecione um médico para a troca de plantão:</p> 
+              <!--<label for="textinput-medico" class="item item-input item-select" ng-if="vm.currentEvent.agendaMedicoId == vm.currentEvent.medicoId">-->
+              <!--  <span class="input-label">Médico</span>-->
+                <select ng-model="vars.medico" ng-if="vm.currentEvent.agendaMedicoId == vm.currentEvent.medicoId" class="item item-input item-select" id="textinput-medico" name="textinput-medico" ng-options="opt as opt.user_name for opt in ConsultaMedico.data track by opt.id">
+                    <option value="">Selecione</option>
+                </select>
+                
+              <!--</label>-->
+              
+              <div class="calendar-modal-btn-placer"> 
+                <button ng-click="cronapi.client('js.blockly.OuvinteNotificacao.solicitarMudancaAgenda').run(vm.currentEvent.agendaId, vars.medico.user_id); vars.medico = null; vm.closePlantaoModal()" ng-if="vm.currentEvent.agendaMedicoId == vm.currentEvent.medicoId" class="btn btn-block btn-full-width" data-dismiss="modal">Solicitar mudança de plantão</button> 
+                <button ng-click="vars.medico = null; vm.closePlantaoModal();" class="btn btn-cancel btn-full-width" data-dismiss="modal">Cancelar</button> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+      <div class="modal fade ionic-bootrapp-merge-fix" id="medicosNomeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"> 
+        <div class="modal-dialog" role="document"> 
+          <div class="modal-content"> 
+            <div class="modal-header"> 
+              <h4 class="modal-title modal-title-mobile">Selecione o médico</h4> 
+            </div> 
+            <div class="modal-body"> 
+              <table> 
+                <tbody> 
+                  <tr ng-repeat="medicoData in vm.medicos"> 
+                    <td ng-click="vm.chooseMedic(medicoData)">{{ medicoData.medico }}</td> 
+                  </tr> 
+                </tbody> 
+              </table> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+      <!-- MODAL TEST --> 
+      <div class="row"> 
+        <div class="col-md-6 col-center-fix text-center"> 
+          <div class="btn-group"> 
+            <button class="btn-seletor" mwl-date-modifier="" date="vm.viewDate" decrement="vm.calendarView" ng-click="vm.cellIsOpen = false"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Anterior </button> 
+            <button class="btn-seletor" mwl-date-modifier="" date="vm.viewDate" set-to-today="" ng-click="vm.cellIsOpen = false"> Atual </button> 
+            <button class="btn-seletor" mwl-date-modifier="" date="vm.viewDate" increment="vm.calendarView" ng-click="vm.cellIsOpen = false"> Próximo <i class="fa fa-arrow-right" aria-hidden="true"></i> </button> 
+          </div> 
+        </div> 
+        <br class="visible-xs visible-sm"> 
+        <div class="col-md-6 text-center" ng-hide="true"> 
+          <div class="btn-group"> 
+            <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'year'" ng-click="vm.cellIsOpen = false">Year</label> 
+            <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'month'" ng-click="vm.cellIsOpen = false">Month</label> 
+            <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'week'" ng-click="vm.cellIsOpen = false">Week</label> 
+            <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'day'" ng-click="vm.cellIsOpen = false">Day</label> 
+          </div> 
+        </div> 
+      </div> 
+      <br> 
+      <div class="flex-box-wrapper" ng-hide="vm.isDetailEnabled"> 
+        <div class="coluna-calendar"></div> 
+        <mwl-calendar class="comp-calendar" events="vm.events" view="vm.calendarView" view-title="vm.calendarTitle" view-date="vm.viewDate" on-event-click="vm.eventClicked(calendarEvent)" on-event-times-changed="vm.eventTimesChanged(calendarEvent); calendarEvent.startsAt = calendarNewEventStart; calendarEvent.endsAt = calendarNewEventEnd" cell-is-open="vm.cellIsOpen" day-view-start="06:00" day-view-end="22:59" day-view-split="30" cell-modifier="vm.modifyCell(calendarCell)" cell-auto-open-disabled="true" on-timespan-click="vm.timespanClicked(calendarDate, calendarCell)"> 
+        </mwl-calendar> 
+      </div> 
+      <!--<br><br><br>--> 
+      <!--<h3 id="event-editor">--> 
+      <!--  Edit events--> 
+      <!--  <button--> 
+      <!--    class="btn btn-primary pull-right"--> 
+      <!--    ng-click="vm.addEvent()">--> 
+      <!--    Add new--> 
+      <!--  </button>--> 
+      <!--  <div class="clearfix"></div>--> 
+      <!--</h3>--> 
+      <table style="display:none;" class="table table-bordered"> 
+        <thead> 
+          <tr> 
+            <th>Title</th> 
+            <th>Primary color</th> 
+            <th>Secondary color</th> 
+            <th>Starts at</th> 
+            <th>Ends at</th> 
+            <th>Remove</th> 
+          </tr> 
+        </thead> 
+        <tbody> 
+          <tr ng-repeat="event in vm.events track by $index"> 
+            <td> <input type="text" class="form-control" ng-model="event.title"> </td> 
+            <td> <input class="form-control" colorpicker="" type="text" ng-model="event.color.primary"> </td> 
+            <td> <input class="form-control" colorpicker="" type="text" ng-model="event.color.secondary"> </td> 
+            <td> <p class="input-group" style="max-width: 250px"> <input type="text" class="form-control" readonly="" uib-datepicker-popup="dd MMMM yyyy" ng-model="event.startsAt" is-open="event.startOpen" close-text="Close"> <span class="input-group-btn"> <button type="button" class="btn btn-default" ng-click="vm.toggle($event, 'startOpen', event)"> <i class="glyphicon glyphicon-calendar"></i> </button> </span> </p> 
+              <div uib-timepicker="" ng-model="event.startsAt" hour-step="1" minute-step="15" show-meridian="true"> 
+              </div> </td> 
+            <td> <p class="input-group" style="max-width: 250px"> <input type="text" class="form-control" readonly="" uib-datepicker-popup="dd MMMM yyyy" ng-model="event.endsAt" is-open="event.endOpen" close-text="Close"> <span class="input-group-btn"> <button type="button" class="btn btn-default" ng-click="vm.toggle($event, 'endOpen', event)"> <i class="glyphicon glyphicon-calendar"></i> </button> </span> </p> 
+              <div uib-timepicker="" ng-model="event.endsAt" hour-step="1" minute-step="15" show-meridian="true"> 
+              </div> </td> 
+            <td> <button class="btn btn-danger" ng-click="vm.events.splice($index, 1)"> Delete </button> </td> 
+          </tr> 
+        </tbody> 
+      </table> 
+    </div> 
+  </ion-content> 
+</ion-view>

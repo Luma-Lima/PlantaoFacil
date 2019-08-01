@@ -1,0 +1,107 @@
+<style title="local" class="col-md-12">
+#crn-button-444704 { 
+  top: 25px;
+}
+
+#crn-textinput-123059 { 
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+#crn-text-component-723642 { 
+  padding-bottom: 6px;
+  padding-right: 6px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+</style> 
+<h1 class="text-center component-holder col-md-12" xattr-position="h1 text-center" xattr-type="h1" data-component="crn-text-component" id="crn-text-component-1021031">Novo Agendamento</h1> 
+<form id="agendamentoForm" name="agendamentoForm"> 
+  <div class="row col-md-12"> 
+     
+    <datasource data-component="crn-datasource" class="component-holder" name="LocalPlantao" entity="app.Local_Plantao" keys="id" rows-per-page="100" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;cd_codigo_lpl&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;nm_local_lpl&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;hospitais&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;hospitais_nm_hospital_hsp&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}]" parameters="" dependent-lazy-post="" lazy="true" condition="" checkrequired=""></datasource><datasource data-component="crn-datasource" class="component-holder" name="Medico" entity="app.Medico" keys="id" rows-per-page="100" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nr_cpf_med&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;nr_crm_med&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_hrsupervisao_med&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_hrfinanceiro_med&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;cd_status_med&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;user&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;nome_med&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;user_email&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}]" parameters="" dependent-lazy-post="" lazy="true" condition="" checkrequired=""></datasource><datasource data-component="crn-datasource" class="component-holder" name="HorarioEscala" entity="app.Horario_Escala" keys="id" rows-per-page="100" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nm_horario_hre&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_horas_hre&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false}]" parameters="" dependent-lazy-post="" lazy="true" condition="" checkrequired=""></datasource><div class="component-holder ng-binding ng-scope  col-md-6" data-component="crn-enterprise-dynamic-combobox" id="comboMedico"> 
+      <div class="form-group"> 
+        <label for="cron-crn-enterprise-dynamic-combobox-213810">Médico</label> 
+        <cron-dynamic-select options="{&quot;headerTemplate&quot;:&quot;&quot;,&quot;footerTemplate&quot;:&quot;&quot;,&quot;dataSourceScreen&quot;:{&quot;name&quot;:&quot;Medico&quot;,&quot;entity&quot;:&quot;app.Medico&quot;,&quot;entityDataSource&quot;:{&quot;id&quot;:&quot;app.Medico&quot;,&quot;customId&quot;:&quot;Medico&quot;,&quot;name&quot;:&quot;Medico&quot;,&quot;customQueryName&quot;:&quot;app.Medico&quot;,&quot;paramValues&quot;:[],&quot;entityFullName&quot;:&quot;app.entity.Medico&quot;,&quot;schemaFields&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nr_cpf_med&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;nr_crm_med&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_hrsupervisao_med&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_hrfinanceiro_med&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;cd_status_med&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;user&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;nome_med&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;user_email&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;type&quot;:&quot;entity&quot;},&quot;keys&quot;:&quot;id&quot;,&quot;rowsPerPage&quot;:&quot;100&quot;,&quot;schema&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nr_cpf_med&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;nr_crm_med&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_hrsupervisao_med&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_hrfinanceiro_med&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;cd_status_med&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;user&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;nome_med&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;user_email&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;parameters&quot;:&quot;&quot;,&quot;condition&quot;:&quot;&quot;,&quot;dependentLazyPost&quot;:&quot;&quot;,&quot;lazy&quot;:&quot;true&quot;,&quot;checkrequired&quot;:&quot;&quot;,&quot;onBeforeCreate&quot;:&quot;&quot;,&quot;onAfterCreate&quot;:&quot;&quot;,&quot;onBeforeUpdate&quot;:&quot;&quot;,&quot;onAfterUpdate&quot;:&quot;&quot;,&quot;onBeforeDelete&quot;:&quot;&quot;,&quot;onAfterDelete&quot;:&quot;&quot;,&quot;onAfterFill&quot;:&quot;&quot;,&quot;dataComponent&quot;:&quot;crn-datasource&quot;,&quot;id&quot;:&quot;&quot;,&quot;oldName&quot;:&quot;&quot;},&quot;filter&quot;:&quot;startswith&quot;,&quot;dataTextField&quot;:&quot;nome_med&quot;,&quot;dataValueField&quot;:&quot;id&quot;,&quot;dynamic&quot;:true,&quot;valuePrimitive&quot;:true,&quot;dropDownList&quot;:true,&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;endswith&quot;:&quot;Final com&quot;},&quot;initValue&quot;:&quot;&quot;,&quot;firstValue&quot;:false,&quot;changeCursor&quot;:true}" ng-required="true" id="cron-crn-enterprise-dynamic-combobox-213810" ng-model="vars.medico" class="k-textbox crn-select form-control" style=""></cron-dynamic-select> 
+      </div> 
+    </div><div class="component-holder ng-binding ng-scope  col-md-6" data-component="crn-enterprise-dynamic-combobox" id="comboHorarioEscala"> 
+      <div class="form-group"> 
+        <label for="cron-crn-enterprise-dynamic-combobox-280807">Horário Escala</label> 
+        <cron-dynamic-select options="{&quot;headerTemplate&quot;:&quot;&quot;,&quot;footerTemplate&quot;:&quot;&quot;,&quot;dataSourceScreen&quot;:{&quot;name&quot;:&quot;HorarioEscala&quot;,&quot;entity&quot;:&quot;app.Horario_Escala&quot;,&quot;entityDataSource&quot;:{&quot;id&quot;:&quot;app.Horario_Escala&quot;,&quot;customId&quot;:&quot;Horario_Escala&quot;,&quot;name&quot;:&quot;HorarioEscala&quot;,&quot;customQueryName&quot;:&quot;app.Horario_Escala&quot;,&quot;paramValues&quot;:[],&quot;entityFullName&quot;:&quot;app.entity.Horario_Escala&quot;,&quot;schemaFields&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nm_horario_hre&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_horas_hre&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false}],&quot;type&quot;:&quot;entity&quot;},&quot;keys&quot;:&quot;id&quot;,&quot;rowsPerPage&quot;:&quot;100&quot;,&quot;schema&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nm_horario_hre&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_horas_hre&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false}],&quot;parameters&quot;:&quot;&quot;,&quot;condition&quot;:&quot;&quot;,&quot;dependentLazyPost&quot;:&quot;&quot;,&quot;lazy&quot;:&quot;true&quot;,&quot;checkrequired&quot;:&quot;&quot;,&quot;onBeforeCreate&quot;:&quot;&quot;,&quot;onAfterCreate&quot;:&quot;&quot;,&quot;onBeforeUpdate&quot;:&quot;&quot;,&quot;onAfterUpdate&quot;:&quot;&quot;,&quot;onBeforeDelete&quot;:&quot;&quot;,&quot;onAfterDelete&quot;:&quot;&quot;,&quot;onAfterFill&quot;:&quot;&quot;,&quot;dataComponent&quot;:&quot;crn-datasource&quot;,&quot;id&quot;:&quot;&quot;,&quot;oldName&quot;:&quot;&quot;},&quot;filter&quot;:&quot;startswith&quot;,&quot;dataTextField&quot;:&quot;nm_horario_hre&quot;,&quot;dataValueField&quot;:&quot;id&quot;,&quot;dynamic&quot;:true,&quot;valuePrimitive&quot;:true,&quot;dropDownList&quot;:true,&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;endswith&quot;:&quot;Final com&quot;},&quot;initValue&quot;:&quot;&quot;,&quot;firstValue&quot;:false,&quot;changeCursor&quot;:true}" ng-required="true" id="cron-crn-enterprise-dynamic-combobox-280807" ng-model="vars.horarioEscala" class="k-textbox crn-select form-control" style=""></cron-dynamic-select> 
+      </div> 
+    </div> 
+  </div> 
+  <div class="row col-md-12"> 
+     
+     
+  </div> 
+  <div class="row col-md-12"> 
+     
+    <div class="component-holder ng-binding ng-scope  col-md-6" data-component="crn-enterprise-dynamic-combobox" id="comboLocalPlantao"> 
+      <div class="form-group"> 
+        <label for="cron-crn-enterprise-dynamic-combobox-595817">Local Plantão</label> 
+        <cron-dynamic-select options="{&quot;headerTemplate&quot;:&quot;&quot;,&quot;footerTemplate&quot;:&quot;&quot;,&quot;dataSourceScreen&quot;:{&quot;name&quot;:&quot;LocalPlantao&quot;,&quot;entity&quot;:&quot;app.Local_Plantao&quot;,&quot;entityDataSource&quot;:{&quot;id&quot;:&quot;app.Local_Plantao&quot;,&quot;customId&quot;:&quot;Local_Plantao&quot;,&quot;name&quot;:&quot;LocalPlantao&quot;,&quot;customQueryName&quot;:&quot;app.Local_Plantao&quot;,&quot;paramValues&quot;:[],&quot;entityFullName&quot;:&quot;app.entity.Local_Plantao&quot;,&quot;schemaFields&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;cd_codigo_lpl&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;nm_local_lpl&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;hospitais&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;hospitais_nm_hospital_hsp&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;type&quot;:&quot;entity&quot;},&quot;keys&quot;:&quot;id&quot;,&quot;rowsPerPage&quot;:&quot;100&quot;,&quot;schema&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;cd_codigo_lpl&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;nm_local_lpl&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;hospitais&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;hospitais_nm_hospital_hsp&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;parameters&quot;:&quot;&quot;,&quot;condition&quot;:&quot;&quot;,&quot;dependentLazyPost&quot;:&quot;&quot;,&quot;lazy&quot;:&quot;true&quot;,&quot;checkrequired&quot;:&quot;&quot;,&quot;onBeforeCreate&quot;:&quot;&quot;,&quot;onAfterCreate&quot;:&quot;&quot;,&quot;onBeforeUpdate&quot;:&quot;&quot;,&quot;onAfterUpdate&quot;:&quot;&quot;,&quot;onBeforeDelete&quot;:&quot;&quot;,&quot;onAfterDelete&quot;:&quot;&quot;,&quot;onAfterFill&quot;:&quot;&quot;,&quot;dataComponent&quot;:&quot;crn-datasource&quot;,&quot;id&quot;:&quot;&quot;,&quot;oldName&quot;:&quot;&quot;},&quot;filter&quot;:&quot;startswith&quot;,&quot;dataTextField&quot;:&quot;nm_local_lpl&quot;,&quot;dataValueField&quot;:&quot;id&quot;,&quot;dynamic&quot;:true,&quot;valuePrimitive&quot;:true,&quot;dropDownList&quot;:true,&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;endswith&quot;:&quot;Final com&quot;},&quot;initValue&quot;:&quot;&quot;,&quot;firstValue&quot;:false,&quot;changeCursor&quot;:true}" ng-required="true" id="cron-crn-enterprise-dynamic-combobox-595817" ng-model="vars.localPlantao" class="k-textbox crn-select form-control" style=""></cron-dynamic-select> 
+      </div> 
+    </div> 
+  <div class="data-agendamento component-holder ng-binding ng-scope col-md-6" data-component="crn-datepicker" id="crn-datepicker-663169"> 
+      <div class="form-group"> 
+        <label for="input8971">Data Inicial Base</label> 
+        <input type="datetime-local" mask="DD/MM/YYYY" mask-placeholder="" ng-required="false" ng-model="vars.dataAgendamentoInicial" class="form-control k-textbox" id="input8971" placeholder="" ng-init="cronapi.client('js.blockly.NovoAgendamentoPeriodo.setDataAtual').run()" ng-change="cronapi.client('js.blockly.NovoAgendamentoPeriodo.validarDataAntiga').run()"> 
+      </div> 
+    </div></div> 
+  <div class="row col-md-12"> 
+     
+  </div> 
+  <div class="row col-md-12"> 
+     
+  </div> 
+  <div class="row col-md-12"> 
+    <div class="component-holder ng-binding ng-scope  col-md-3" style="text-align: left;" data-component="crn-textinput" id="crn-textinput-123059">
+        <div class="form-group"><label for="input9745">Agendar automaticamente até:</label>
+        </div>
+    </div>
+     
+    
+    <div class="data-agendamento component-holder ng-binding ng-scope  col-md-3" data-component="crn-datepicker" id="crn-datepicker29901"> 
+      <div class="form-group"> 
+        <label for="input8971">Mês Final</label> 
+        <input type="month" mask="MMMM/YYYY" mask-placeholder="MM/AAAA" ng-required="false" ng-model="vars.mesAgendamentoFinal" class="form-control k-textbox" id="input8971" placeholder="" ng-init="" ng-change="cronapi.client('js.blockly.NovoAgendamentoPeriodo.validarMesAntigo').run()"> 
+      </div> 
+    </div>
+    <h1 class="component-holder text-left h5  col-md-2" xattr-position="text-left" xattr-type="h5" data-component="crn-text-component" id="crn-text-component-244780">Semana:</h1>
+    <h1 class="cor-semana-agendamento h4 text-center  col-md-3" xattr-position="text-center" xattr-type="h5" data-component="crn-text-component" id="texto-cor-semana" ng-init="" style="height: 40px;"></h1> 
+    <label class="component-holder col-md-12 text-left" xattr-position="text-left" xattr-type="h1" data-component="crn-text-component" id="crn-text-component-220282">Datas para Agendamento:</label><div class="col-md-12 novo-agendamento-datas"> 
+    <div style="margin-bottom: 10px;" ng-repeat="dia in vars.listaDatas"> 
+      <div class="component-holder ng-binding ng-scope  col-md-12" data-component="crn-textinputbutton" id="crn-textinputbutton-666498"> 
+        <label class="form-group" for="inputButton624"></label> 
+        <div class="form-inline"> 
+          <div class="input-group"> 
+            <input readonly="true" id="inputButton624" type="text" mask="" mask-placeholder="" ng-required="false" class="form-control k-textbox" ng-value="dia" placeholder="" style=""> 
+          </div> 
+          <button class="btn btn-xs row" type="submit" ng-click="cronapi.client('js.blockly.Agendamento.removerDiaAgendamento').run(dia)" xattr-size="btn-xs" xattr-fullsize="" xattr-theme="btn-succes" data-component="crn-button" id="crn-button-624" style="margin: 0; font-size: 14px;"><i class=""></i><span>Remover</span></button> 
+        </div> 
+      </div> 
+    </div> 
+  </div>
+  </div> 
+  <!--<div style="display:flex; width: 100%; justify-content:center; padding: 20px; flex-wrap: wrap;" class="col-md-12">--> 
+  <div class="component-holder ng-binding ng-scope  col-md-6" data-component="crn-button" id="btnSave"> 
+    <button class="btn btn-default k-button btn-block" type="submit" ng-click="cronapi.client('js.blockly.NovoAgendamentoPeriodo.concluirAgendamento').run()" xattr-size="" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""><i class="glyphicon glyphicon-ok-sign"></i> <span>Concluir Agendamento</span></button> 
+  </div><div class="component-holder ng-binding ng-scope  col-md-6" data-component="crn-button" id="crn-button85091"> 
+    <button class="btn btn-default k-button btn-block" type="submit" ng-click="cronapi.client('js.blockly.NovoAgendamentoPeriodo.limparListaDatas').run()" xattr-size="" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""><i class="glyphicon glyphicon-trash"></i> <span>Limpar Datas</span></button> 
+  </div> 
+  <!--</div>    --> 
+</form><div class="modal fade" id="modal43339">
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="component-holder modal-header ">
+       <div class="list-group list-group-sm row">
+         <div class="text-center component-holder h5" xattr-position="h1 text-center" xattr-type="h5" data-component="crn-text-component" id="crn-text-component-723642">Agendamento realizado. Deseja continuar o cadastro de plantão para o mesmo médico?</div><div class="component-holder ng-binding ng-scope style6366  col-md-6" data-component="crn-button" id="crn-button-630143"><button class="btn k-button btn-success btn-block" ng-click="cronapi.client('js.blockly.NovoAgendamentoPeriodo.agendarNovoMedico').run()" xattr-size="" xattr-fullsize="btn-block" xattr-theme="btn-success" xattr-disabled=""><i class="glyphicon glyphicon-ok"></i> <span>Sim </span></button></div><div class="component-holder ng-binding ng-scope  col-md-6" data-component="crn-button" id="crn-button84221"><button class="btn k-button btn-danger btn-block" ng-click="cronapi.client('js.blockly.NovoAgendamentoPeriodo.voltaCrudAgenda').run()" xattr-size="" xattr-fullsize="btn-block" xattr-theme="btn-danger" xattr-disabled=""><i class="glyphicon glyphicon-remove"></i> <span>Não</span></button></div>
+       </div>
+      </div>
+      
+     
+   </div>
+ </div>
+</div>

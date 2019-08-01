@@ -1,0 +1,190 @@
+<h3 class="lead component-holder text-left">Agenda</h3>
+
+<datasource data-component="crn-datasource" filter="" name="Agenda" entity="app.Agenda" keys="id" rows-per-page="100" class="" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;horario_Escala&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;medico&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;dt_agenda_age&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;cd_status_age&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_mudancas_age&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;cd_corsemana_age&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;color&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;startsAt&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;endsAt&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;draggable&quot;,&quot;type&quot;:&quot;Boolean&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;resizable&quot;,&quot;type&quot;:&quot;Boolean&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;actions&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;responsible&quot;,&quot;type&quot;:&quot;Boolean&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;local_Plantao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;corSemana&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;horario_Escala_nm_horario_hre&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;medico_nr_cpf_med&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;local_Plantao_cd_codigo_lpl&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;corSemana_descricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}]" lazy="true" parameters="" condition="" dependent-lazy-post="" checkrequired=""></datasource>
+
+
+<div ng-hide="Agenda.editing || Agenda.inserting" class="component-holder ng-binding ng-scope" data-component="crn-cron-grid" id="cron-crn-grid-search">
+  <cron-grid options="{&quot;dataSourceScreen&quot;:{&quot;name&quot;:&quot;Agenda&quot;,&quot;entity&quot;:&quot;app.Agenda&quot;,&quot;entityDataSource&quot;:{&quot;id&quot;:&quot;app.Agenda&quot;,&quot;customId&quot;:&quot;Agenda&quot;,&quot;name&quot;:&quot;Agenda&quot;,&quot;customQueryName&quot;:&quot;app.Agenda&quot;,&quot;paramValues&quot;:[],&quot;entityFullName&quot;:&quot;app.entity.Agenda&quot;,&quot;schemaFields&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;horario_Escala&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;medico&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;dt_agenda_age&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;cd_status_age&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_mudancas_age&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;cd_corsemana_age&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;color&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;startsAt&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;endsAt&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;draggable&quot;,&quot;type&quot;:&quot;Boolean&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;resizable&quot;,&quot;type&quot;:&quot;Boolean&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;actions&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;responsible&quot;,&quot;type&quot;:&quot;Boolean&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;local_Plantao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;corSemana&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;horario_Escala_nm_horario_hre&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;medico_nr_cpf_med&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;local_Plantao_cd_codigo_lpl&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;corSemana_descricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;type&quot;:&quot;entity&quot;},&quot;keys&quot;:&quot;id&quot;,&quot;rowsPerPage&quot;:&quot;100&quot;,&quot;schema&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;horario_Escala&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;medico&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;dt_agenda_age&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;cd_status_age&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_mudancas_age&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;cd_corsemana_age&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;color&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;startsAt&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;endsAt&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;draggable&quot;,&quot;type&quot;:&quot;Boolean&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;resizable&quot;,&quot;type&quot;:&quot;Boolean&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;actions&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;responsible&quot;,&quot;type&quot;:&quot;Boolean&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;local_Plantao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;corSemana&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;horario_Escala_nm_horario_hre&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;medico_nr_cpf_med&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;local_Plantao_cd_codigo_lpl&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;corSemana_descricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;parameters&quot;:&quot;&quot;,&quot;condition&quot;:&quot;&quot;,&quot;dependentLazyPost&quot;:&quot;&quot;,&quot;lazy&quot;:&quot;true&quot;,&quot;checkrequired&quot;:&quot;&quot;,&quot;onBeforeCreate&quot;:&quot;&quot;,&quot;onAfterCreate&quot;:&quot;&quot;,&quot;onBeforeUpdate&quot;:&quot;&quot;,&quot;onAfterUpdate&quot;:&quot;&quot;,&quot;onBeforeDelete&quot;:&quot;&quot;,&quot;onAfterDelete&quot;:&quot;&quot;,&quot;onAfterFill&quot;:&quot;&quot;,&quot;dataComponent&quot;:&quot;crn-datasource&quot;,&quot;id&quot;:&quot;&quot;,&quot;oldName&quot;:&quot;&quot;},&quot;allowPaging&quot;:true,&quot;allowSorting&quot;:true,&quot;allowGrouping&quot;:false,&quot;allowSelectionTotalPageToShow&quot;:true,&quot;allowRefreshGrid&quot;:true,&quot;allowSelectionRow&quot;:true,&quot;batchMode&quot;:true,&quot;hideModalButtons&quot;:false,&quot;editable&quot;:&quot;datasource&quot;,&quot;pathView&quot;:&quot;src/main/webapp/views/logged/agenda.view.html&quot;,&quot;modelGrid&quot;:&quot;custom&quot;,&quot;columns&quot;:[{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;medico_nr_cpf_med&quot;,&quot;headerText&quot;:&quot;Medico CPF&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;alignment&quot;:&quot;left&quot;,&quot;inputType&quot;:&quot;default&quot;,&quot;aggregates&quot;:[]},{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;dt_agenda_age&quot;,&quot;headerText&quot;:&quot;Data Agenda&quot;,&quot;type&quot;:&quot;datetime&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;inputType&quot;:&quot;date&quot;,&quot;dateOptions&quot;:{&quot;type&quot;:&quot;datetime&quot;,&quot;dateInput&quot;:true},&quot;aggregates&quot;:[]},{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;horario_Escala_nm_horario_hre&quot;,&quot;headerText&quot;:&quot;Horario Escala&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;alignment&quot;:&quot;left&quot;,&quot;inputType&quot;:&quot;default&quot;,&quot;aggregates&quot;:[]},{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;local_Plantao_cd_codigo_lpl&quot;,&quot;headerText&quot;:&quot;Codigo Plantao&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;alignment&quot;:&quot;left&quot;,&quot;inputType&quot;:&quot;default&quot;,&quot;aggregates&quot;:[]},{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;cd_corsemana_age&quot;,&quot;headerText&quot;:&quot;Cor da semana&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;visible&quot;:false,&quot;visibleCrud&quot;:false,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;alignment&quot;:&quot;right&quot;,&quot;inputType&quot;:&quot;default&quot;,&quot;aggregates&quot;:[]},{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;qt_mudancas_age&quot;,&quot;headerText&quot;:&quot;Quantidade Mudanças&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;alignment&quot;:&quot;right&quot;,&quot;inputType&quot;:&quot;default&quot;,&quot;aggregates&quot;:[]},{&quot;dataType&quot;:&quot;Command&quot;,&quot;sortable&quot;:false,&quot;filterable&quot;:false,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;command&quot;:&quot;edit|destroy&quot;,&quot;required&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;aggregates&quot;:[]}],&quot;toolBarButtons&quot;:[{&quot;type&quot;:&quot;Native&quot;,&quot;title&quot;:&quot;create&quot;}],&quot;details&quot;:[],&quot;groupings&quot;:[]}" ng-model="vars.grid74493" class="" style="">
+  </cron-grid>
+</div>
+
+<div data-component="crn-form" id="crn-form-form-Agenda-74493">
+  <div class="form" ng-show="Agenda.editing || Agenda.inserting">
+    <form crn-datasource="Agenda" class="">
+      <div class="tool-bar" ng-hide="datasource.editing || datasource.inserting">
+        <button class="btn btn-primary btn-fab k-button" data-component="crn-button" ng-click="datasource.startInserting()"><span class="k-icon k-i-plus"></span></button>
+        <button class="btn btn-primary btn-fab k-button" data-component="crn-button" ng-click="datasource.startEditing()"><span class="k-icon k-i-edit"></span></button>
+        <button class="btn btn-primary btn-fab k-button" data-component="crn-button" ng-disabled="!datasource.hasPrevious()" ng-click="datasource.previous()"><span class="k-icon k-i-arrow-chevron-left"></span></button>
+        <button class="btn btn-primary btn-fab k-button" data-component="crn-button" ng-disabled="!datasource.hasNext()" ng-click="datasource.next()"><span class="k-icon k-i-arrow-chevron-right"></span></button>
+        <button class="btn btn-danger btn-fab k-button" data-component="crn-button" ng-click="datasource.remove()"><span class="k-icon k-i-close"></span></button>
+      </div>
+      <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting">
+        <button class="btn btn-success btn-fab k-button" id="btn_crud_post41107" data-component="crn-button" ng-click="datasource.post()"><span class="k-icon k-i-check"></span></button>
+        <button class="btn btn-danger btn-fab k-button" id="btn_crud_cancel41107" data-component="crn-button" ng-click="datasource.cancel()"><span class="k-icon k-i-cancel"></span></button>
+      </div>
+      <br>
+      <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
+
+
+                <div data-component="crn-textinput" id="crn-textinput-dt_agenda_age-74493" class="">
+                  <div class="form-group">
+                        <label for="textinput-dt_agenda_age" class="">Data da Agenda</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="date" ng-model="Agenda.active.dt_agenda_age" class="form-control k-textbox" id="textinput-dt_agenda_age" placeholder="Dt _agenda _age" mask="DD/MM/YYYY" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+
+
+                <div data-component="crn-textinput" id="crn-textinput-cd_status_age-74493" class="">
+                  <div class="form-group">
+                        <label for="textinput-cd_status_age" class="">Status: 0 - Ativo | 1 - Inativo</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="integer" ng-model="Agenda.active.cd_status_age" class="form-control k-textbox" id="textinput-cd_status_age" placeholder="Informe status" mask="" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+
+
+                <div data-component="crn-textinput" id="crn-textinput-id-74493" class="" cronapp-security="visible : None">
+                  <div class="form-group">
+                        <label for="textinput-id" class="">Id</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="text" ng-model="Agenda.active.id" class="form-control k-textbox" id="textinput-id" placeholder="id" mask="" mask-placeholder="" ng-required="true">
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+                    <datasource data-component="crn-datasource" name="Horario_EscalaCombo" entity="app.Horario_Escala" keys="id" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nm_horario_hre&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_horas_hre&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false}]" lazy="true"></datasource>
+
+
+                <div data-component="crn-enterprise-dynamic-combobox" id="crn-enterprise-dynamic-combobox-horario_Escala-74493" class="">
+                  <div class="form-group">
+                        <label for="enterprise-dynamic-combobox-horario_Escala" class="">Horario_Escala</label>
+ <!-- else for if !model.hasCronappFramework() -->
+								<cron-dynamic-select id="enterprise-dynamic-combobox-horario_Escala" name="enterprise-dynamic-combobox-horario_Escala" options="{&quot;dataSourceScreen&quot;:{&quot;name&quot;:&quot;Horario_EscalaCombo&quot;,&quot;entity&quot;:&quot;app.Horario_Escala&quot;,&quot;entityDataSource&quot;:{&quot;id&quot;:&quot;app.Horario_Escala&quot;,&quot;customId&quot;:&quot;Horario_Escala&quot;,&quot;name&quot;:&quot;Horario_EscalaCombo&quot;,&quot;customQueryName&quot;:&quot;app.Horario_Escala&quot;,&quot;paramValues&quot;:[],&quot;entityFullName&quot;:&quot;app.entity.Horario_Escala&quot;,&quot;schemaFields&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nm_horario_hre&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_horas_hre&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false}],&quot;type&quot;:&quot;entity&quot;},&quot;schema&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nm_horario_hre&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_horas_hre&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false}],&quot;id&quot;:&quot;app.Horario_Escala&quot;},&quot;filter&quot;:&quot;contains&quot;,&quot;dataTextField&quot;:&quot;nm_horario_hre&quot;,&quot;dataValueField&quot;:&quot;id&quot;,&quot;dynamic&quot;:true,&quot;valuePrimitive&quot;:true,&quot;relationDataSource&quot;:{&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;endswith&quot;:&quot;Final com&quot;}}" ng-model="Agenda.active.horario_Escala" class="crn-select form-control">
+                </cron-dynamic-select>
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+                    <datasource data-component="crn-datasource" name="MedicoCombo" entity="app.Medico" keys="id" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nr_cpf_med&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;nr_crm_med&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_hrsupervisao_med&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_hrfinanceiro_med&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;cd_status_med&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;user&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;user_email&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}]" lazy="true"></datasource>
+
+
+                <div data-component="crn-enterprise-dynamic-combobox" id="crn-enterprise-dynamic-combobox-medico-74493" class="">
+                  <div class="form-group">
+                        <label for="enterprise-dynamic-combobox-medico" class="">Medico</label>
+ <!-- else for if !model.hasCronappFramework() -->
+								<cron-dynamic-select id="enterprise-dynamic-combobox-medico" name="enterprise-dynamic-combobox-medico" options="{&quot;dataSourceScreen&quot;:{&quot;name&quot;:&quot;MedicoCombo&quot;,&quot;entity&quot;:&quot;app.Medico&quot;,&quot;entityDataSource&quot;:{&quot;id&quot;:&quot;app.Medico&quot;,&quot;customId&quot;:&quot;Medico&quot;,&quot;name&quot;:&quot;MedicoCombo&quot;,&quot;customQueryName&quot;:&quot;app.Medico&quot;,&quot;paramValues&quot;:[],&quot;entityFullName&quot;:&quot;app.entity.Medico&quot;,&quot;schemaFields&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nr_cpf_med&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;nr_crm_med&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_hrsupervisao_med&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_hrfinanceiro_med&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;cd_status_med&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;user&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;user_email&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;type&quot;:&quot;entity&quot;},&quot;schema&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nr_cpf_med&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;nr_crm_med&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_hrsupervisao_med&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;qt_hrfinanceiro_med&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;cd_status_med&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;user&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;user_email&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;id&quot;:&quot;app.Medico&quot;},&quot;filter&quot;:&quot;contains&quot;,&quot;dataTextField&quot;:&quot;nr_cpf_med&quot;,&quot;dataValueField&quot;:&quot;id&quot;,&quot;dynamic&quot;:true,&quot;valuePrimitive&quot;:true,&quot;relationDataSource&quot;:{&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;endswith&quot;:&quot;Final com&quot;}}" ng-model="Agenda.active.medico" class="crn-select form-control">
+                </cron-dynamic-select>
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+
+
+                <div data-component="crn-textinput" id="crn-textinput-qt_mudancas_age-74493" class="">
+                  <div class="form-group">
+                        <label for="textinput-qt_mudancas_age" class="">Quantidade Mudanças</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="integer" ng-model="Agenda.active.qt_mudancas_age" class="form-control k-textbox" id="textinput-qt_mudancas_age" placeholder="Informe a quantidade de mudanças" mask="" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+
+
+                
+
+
+                <div data-component="crn-textinput" id="crn-textinput-color-74493" class="" cronapp-security="visible : None, enabled : None">
+                  <div class="form-group">
+                        <label for="textinput-color" class="">Color</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="text" ng-model="Agenda.active.color" class="form-control k-textbox" id="textinput-color" placeholder="Color" mask="" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+
+
+                <div data-component="crn-textinput" id="crn-textinput-startsAt-74493" class="">
+                  <div class="form-group">
+                        <label for="textinput-startsAt" class="">Starts At</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="date" ng-model="Agenda.active.startsAt" class="form-control k-textbox" id="textinput-startsAt" placeholder="Starts At" mask="" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+
+
+                <div data-component="crn-textinput" id="crn-textinput-endsAt-74493" class="">
+                  <div class="form-group">
+                        <label for="textinput-endsAt" class="">Ends At</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="date" ng-model="Agenda.active.endsAt" class="form-control k-textbox" id="textinput-endsAt" placeholder="Ends At" mask="" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+
+
+                <div data-component="crn-enterprise-checkbox" id="crn-textinput-draggable-74493" class="" cronapp-security="visible : None, enabled : None">
+                  <div class="form-group">
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="checkbox" class="k-checkbox" ng-model="Agenda.active.draggable" id="textinput-draggable" placeholder="Draggable">
+								<label for="textinput-draggable" class="k-checkbox-label">Draggable</label>
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+
+
+                <div data-component="crn-enterprise-checkbox" id="crn-textinput-resizable-74493" class="" cronapp-security="visible : None, enabled : None">
+                  <div class="form-group">
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="checkbox" class="k-checkbox" ng-model="Agenda.active.resizable" id="textinput-resizable" placeholder="Resizable">
+								<label for="textinput-resizable" class="k-checkbox-label">Resizable</label>
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+
+
+                <div data-component="crn-textinput" id="crn-textinput-actions-74493" class="" cronapp-security="visible : None, enabled : None">
+                  <div class="form-group">
+                        <label for="textinput-actions" class="">Actions</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="text" ng-model="Agenda.active.actions" class="form-control k-textbox" id="textinput-actions" placeholder="Actions" mask="" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+
+
+                <div data-component="crn-enterprise-checkbox" id="crn-textinput-responsible-74493" class="" cronapp-security="visible : None, enabled : None">
+                  <div class="form-group">
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="checkbox" class="k-checkbox" ng-model="Agenda.active.responsible" id="textinput-responsible" placeholder="Responsible">
+								<label for="textinput-responsible" class="k-checkbox-label">Responsible</label>
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+                    <datasource data-component="crn-datasource" name="Local_PlantaoCombo" entity="app.Local_Plantao" keys="id" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;cd_codigo_lpl&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;nm_local_lpl&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;hospitais&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;hospitais_nm_hospital_hsp&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}]" lazy="true"></datasource>
+
+
+                <div data-component="crn-enterprise-dynamic-combobox" id="crn-enterprise-dynamic-combobox-local_Plantao-74493" class="">
+                  <div class="form-group">
+                        <label for="enterprise-dynamic-combobox-local_Plantao" class="">Local_Plantao</label>
+ <!-- else for if !model.hasCronappFramework() -->
+								<cron-dynamic-select id="enterprise-dynamic-combobox-local_Plantao" name="enterprise-dynamic-combobox-local_Plantao" options="{&quot;dataSourceScreen&quot;:{&quot;name&quot;:&quot;Local_PlantaoCombo&quot;,&quot;entity&quot;:&quot;app.Local_Plantao&quot;,&quot;entityDataSource&quot;:{&quot;id&quot;:&quot;app.Local_Plantao&quot;,&quot;customId&quot;:&quot;Local_Plantao&quot;,&quot;name&quot;:&quot;Local_PlantaoCombo&quot;,&quot;customQueryName&quot;:&quot;app.Local_Plantao&quot;,&quot;paramValues&quot;:[],&quot;entityFullName&quot;:&quot;app.entity.Local_Plantao&quot;,&quot;schemaFields&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;cd_codigo_lpl&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;nm_local_lpl&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;hospitais&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;hospitais_nm_hospital_hsp&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;type&quot;:&quot;entity&quot;},&quot;schema&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;cd_codigo_lpl&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;nm_local_lpl&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;hospitais&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;hospitais_nm_hospital_hsp&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;id&quot;:&quot;app.Local_Plantao&quot;},&quot;filter&quot;:&quot;contains&quot;,&quot;dataTextField&quot;:&quot;cd_codigo_lpl&quot;,&quot;dataValueField&quot;:&quot;id&quot;,&quot;dynamic&quot;:true,&quot;valuePrimitive&quot;:true,&quot;relationDataSource&quot;:{&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;endswith&quot;:&quot;Final com&quot;}}" ng-model="Agenda.active.local_Plantao" class="crn-select form-control">
+                </cron-dynamic-select>
+                         <!-- end if !model.hasCronappFramework() -->
+                  </div>
+                </div>
+        <!-- NtoN  -->
+        <!-- NtoN  end-->
+      </fieldset>
+    </form>
+    <form>
+      <fieldset>
+        <!-- OneToN -->
+        <!-- OneToOne  end -->
+      </fieldset>
+    </form>
+     
+  </div>
+</div>
+
+

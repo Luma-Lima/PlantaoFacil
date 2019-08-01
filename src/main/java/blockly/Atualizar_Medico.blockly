@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly formTarget="" resourceType="JAVA" ruleDescription="Atualizar_Medico" ruleName="Atualizar_Medico" ruleSynchronous="false" ruleTimeout="" ruleType="I">
+  <metadata scale="1" scrollx="488.4000000000001" scrolly="-57" target="Anb:u5+^,0vLkL9QIqn5"/>
+  <block colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-350" y="130">
+    <mutation>
+      <arg name="medico_destino"/>
+      <arg name="dt_agenda"/>
+      <arg name="horario_escala"/>
+      <arg name="medico_origem"/>
+    </mutation>
+    <field name="NAME">Executar</field>
+    <comment h="80" pinned="false" w="160">Atualizar_Medico</comment>
+    <statement name="STACK">
+      <block colour="#aa2f00" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="}WPRF$fZb9d(%C:i.=IF" multilayer="false" namespace="cronapi.database.Operations.update" origintype="procedures_sql_update_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EAtualizar%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20atualiza%20um%20registro%20no%20banco%20de%20dados%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Fonte%20de%20dados%20:%20Tabela%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Entidade%20:%20Objeto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.database.Operations.update%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.database.Operations.update%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_sql_update_callnoreturn">
+        <mutation data="%7B%22queryBuilderJson%22:%7B%22isValid%22:true,%22isEmpty%22:false,%22operationType%22:%22field%22,%22type%22:%22update%22,%22rulesEntity%22:%5B%7B%22entity%22:%22Agenda%22,%22namespace%22:%22app.entity.Agenda%22,%22alias%22:%22%22%7D%5D,%22rulesSelect%22:%5B%7B%22operator%22:%22equal%22,%22field%22:%22medico%22,%22value%22:%22:medico%22,%22type%22:%22string%22%7D%5D,%22rulesGroupBy%22:%5B%5D,%22rulesHaving%22:%5B%5D,%22rulesOrderBy%22:%5B%5D,%22rules%22:%7B%22condition%22:%22AND%22,%22rules%22:%5B%7B%22id%22:%22dt_agenda_age%22,%22field%22:%22dt_agenda_age%22,%22type%22:%22date%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22value%22:%22:dt_agenda_age%22,%22valueIsField%22:false%7D,%7B%22id%22:%22horario_Escala%22,%22field%22:%22horario_Escala%22,%22type%22:%22string%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22value%22:%22:horario_Escala%22,%22valueIsField%22:false%7D,%7B%22id%22:%22medico%22,%22field%22:%22medico%22,%22type%22:%22string%22,%22input%22:%22text%22,%22operator%22:%22equal%22,%22value%22:%22:medico%22,%22valueIsField%22:false%7D%5D,%22not%22:false,%22valid%22:true%7D,%22isRawSql%22:false,%22multiTenant%22:true,%22paginatorAutomatic%22:false%7D,%22entity%22:%22Agenda%22,%22entityFullName%22:%22app.entity.Agenda%22,%22filter%22:%22update%20Agenda%20set%20medico%20=%20:medico%20where%20dt_agenda_age%20=%20:dt_agenda_age%20AND%20horario_Escala%20=%20:horario_Escala%20AND%20medico%20=%20:medico%22,%22type%22:%22F%22,%22params%22:%22%5B%5C%22medico%5C%22,%5C%22dt_agenda_age%5C%22,%5C%22horario_Escala%5C%22,%5C%22medico%5C%22%5D%22%7D" name="{{cronapi.database.Operations.update}}">
+          <arg name="medico"/>
+          <arg name="dt_agenda_age"/>
+          <arg name="horario_Escala"/>
+          <arg name="medico"/>
+        </mutation>
+        <value name="ARG0">
+          <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="{^9_B=r|CsUV(pE1v4aB" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+            <field name="VAR">medico_destino</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="6I0uk$v_=xd[*:amf(@;" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+            <field name="VAR">dt_agenda</field>
+          </block>
+        </value>
+        <value name="ARG2">
+          <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="LTtfsv0{nTJx+V-%,S?." origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+            <field name="VAR">horario_escala</field>
+          </block>
+        </value>
+        <value name="ARG3">
+          <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="8x,}P@4hdlFvd=Jc[}T_" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+            <field name="VAR">medico_origem</field>
+          </block>
+        </value>
+        <next>
+          <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="Bto+X#qC*|MCQrP_6R6g" multilayer="true" namespace="cronapi.screen.notify" origintype="notify_type" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EExibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20exibe%20notifica%C3%A7%C3%A3o%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Tipo%20da%20notifica%C3%A7%C3%A3o%20:%20Texto%3C/span%3E%3Cdiv%3E%20pode%20ser%20success,%20error,%20warning,%20info%20ou%20primary%3C/div%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cdiv%3E%20Mensagem%20ou%20conte%C3%BAdo%20html%20a%20ser%20exibido%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.notify%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.notify%3C/a%3E%3C/div%3E%3C/div%3E" type="notify_type">
+            <mutation name="{{cronapi.screen.notify}}" value="[object Object]"/>
+            <field name="SELECT">success</field>
+            <value name="MESSAGE">
+              <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="GEEZ,,!Tya]@*1d};W)j" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field name="TEXT">OK</field>
+              </shadow>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</blockly>

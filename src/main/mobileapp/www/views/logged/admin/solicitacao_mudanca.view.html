@@ -1,0 +1,71 @@
+<ion-view cache-view="false" view-title="Solicitação Mudança" hide-back-button="true" class="pane"> 
+  <ion-nav-buttons side="right"> 
+    <button class="button button-stable" ng-show="Solicitacao_Mudanca.inserting || Solicitacao_Mudanca.editing" ng-click="cronapi.client('js.blockly.SolicitacaoMudanca.confirmar').run(Solicitacao_Mudanca.active.id)"> <i class="icon ion-checkmark"></i> </button> 
+  </ion-nav-buttons> 
+  <ion-nav-buttons side="left"> 
+    <button class="button button-icon button-clear ion-navicon" ng-hide="Solicitacao_Mudanca.inserting || Solicitacao_Mudanca.editing" menu-toggle="left"> </button> 
+    <button class="button button-stable" ng-show="Solicitacao_Mudanca.inserting || Solicitacao_Mudanca.editing" ng-click="Solicitacao_Mudanca.cancel()"> <i class="icon ion-android-arrow-back"></i> </button> 
+  </ion-nav-buttons> 
+  <ion-content class="scroll-content" data-component="crn-ion-content"> 
+    <div class="component-holder ng-binding ng-scope ui-draggable ui-draggable-handle" data-component="crn-datasource" id="crn-datasource-906854"> 
+      <datasource name="Solicitacao_Mudanca" entity="api/cronapi/query/query636819" keys="id" rows-per-page="10" delete-message="Deseja remover?" class="" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;horario_Escala&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;dt_solicitao_mud&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;cd_status_mud&quot;,&quot;type&quot;:&quot;Int32&quot;,&quot;nullable&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;agenda&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;medicoSolic&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;medicoDest&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;horario_Escala_nm_horario_hre&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;agenda_dt_agenda_age&quot;,&quot;type&quot;:&quot;DateTime&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;medicoSolic_nr_cpf_med&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;medicoDest_nr_cpf_med&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}]" condition=""></datasource> 
+    </div> 
+    <div crn-datasource="Solicitacao_Mudanca" class="" ng-hide="Solicitacao_Mudanca.editing || Solicitacao_Mudanca.inserting"> 
+      <ion-list can-swipe="listCanSwipe"> 
+        <ion-item ng-repeat="rowData in datasource.data" class="item" ng-click="datasource.startEditing(rowData)"> 
+          <div class="row col-xs-12"> 
+            <h2 xattr-position="text-left" class="component-holder text-left col-xs-1" data-component="crn-label" id="crn-label-696341" style="width: 148px; height: 28px;"><strong>{{rowData.agenda.local_Plantao.hospitais.nm_hospital_hsp}}</strong></h2> 
+            <h2 xattr-position="text-right" class="component-holder text-right col-xs-1" data-component="crn-label" id="crn-label-688778" style="width: 140px; height: 28px;">{{rowData.medicoSolic.user.name}}</h2> 
+          </div> 
+          <div class="row col-xs-12"> 
+            <h2 xattr-position="text-left" class="component-holder text-left col-xs-1" data-component="crn-label" id="crn-label-696341" style="width: 148px; height: 28px;">{{rowData.agenda.dt_agenda_age | mask : 'DD/MM/YYYY'}}</h2> 
+            <h2 xattr-position="text-right" class="component-holder text-right col-xs-1" data-component="crn-label" id="crn-label-688778" style="width: 140px; height: 28px;">{{rowData.horario_Escala.nm_horario_hre}}</h2> 
+          </div> 
+          <ion-option-button class="button-positive col-xs-12" ng-click="datasource.startEditing(rowData)"> 
+            <i class="icon ion-edit"></i> 
+          </ion-option-button> 
+          <ion-option-button class="button-assertive col-xs-12" ng-click="datasource.remove(rowData)">
+             &nbsp; 
+            <i class="icon ion-trash-a"></i> 
+          </ion-option-button> 
+        </ion-item> 
+      </ion-list> 
+    </div> 
+    <div ng-show="Solicitacao_Mudanca.editing || Solicitacao_Mudanca.inserting"> 
+      <form crn-datasource="Solicitacao_Mudanca"> 
+        <fieldset ng-disabled="!Solicitacao_Mudanca.editing &amp;&amp; !Solicitacao_Mudanca.inserting"> 
+          <div class="list"> 
+            <label for="textinput-hospital" class="item item-input item-stacked-label"> <span class="input-label">Local</span> <input type="text" ng-disabled="true" ng-model="Solicitacao_Mudanca.active.agenda.local_Plantao.hospitais.nm_hospital_hsp" id="textinput-hospital" name="textinput-hospital"> </label> 
+            <label for="textinput-date" class="item item-input item-stacked-label"> <span class="input-label">Data</span> <input type="date" ng-disabled="true" ng-model="Solicitacao_Mudanca.active.agenda.dt_agenda_age" id="textinput-date" name="textinput-date" mask="DD/MM/YYYY"> </label> 
+            <label for="textinput-horario" class="item item-input item-stacked-label"> <span class="input-label">Horário</span> <input type="text" ng-disabled="true" ng-model="Solicitacao_Mudanca.active.agenda.horario_Escala.nm_horario_hre" id="textinput-horario" name="textinput-horario"> </label> 
+            <label for="textinput-solicitante" class="item item-input item-stacked-label"> <span class="input-label">Solicitante</span> <input type="text" ng-disabled="true" ng-model="Solicitacao_Mudanca.active.medicoSolic.user.name" id="textinput-solicitante" name="textinput-solicitante"> </label> 
+            
+            <div class="list radio-group component-holder" ng-model="vars.aceito" data-component="crn-radio" id="crn-radio-118867">
+              <div class="item item-divider ng-binding">
+                Você aceita mudança de plantão?
+              </div>
+              <div data-component="crn-radioOption">
+                <label class="item item-radio" crn-value="" value="S"><input type="radio" name="group">
+                  <div class="radio-content">
+                    <div class="item-content">
+                      Aceito
+                    </div>
+                    <i class="radio-icon ion-checkmark"></i>
+                  </div></label>
+              </div>
+              <div data-component="crn-radioOption">
+                <label class="item item-radio" crn-value="" value="N"><input type="radio" name="group">
+                  <div class="radio-content">
+                    <div class="item-content">
+                      Não Aceito
+                    </div>
+                    <i class="radio-icon ion-checkmark"></i>
+                  </div></label>
+              </div>
+            </div> 
+          </div> 
+        </fieldset> 
+      </form> 
+    </div> 
+  </ion-content> 
+</ion-view>
